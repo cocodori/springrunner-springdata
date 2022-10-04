@@ -32,9 +32,6 @@ class JpaRepositoryTest {
         var result = movieRepository.findByDirector(movie.getDirector());
         Assertions.assertEquals(movie, result);
         Assertions.assertEquals(movie.getTitle(), result.getTitle());
-
-        var page = movieRepository.findAll(PageRequest.of(0, 3));
-        Assertions.assertEquals(3, page.getNumberOfElements());
     }
 
 }

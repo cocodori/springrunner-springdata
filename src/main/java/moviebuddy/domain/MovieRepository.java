@@ -1,11 +1,11 @@
 package moviebuddy.domain;
 
 
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.Repository;
 
-public interface MovieRepository extends PagingAndSortingRepository<Movie, Long> {
+public interface MovieRepository extends Repository<Movie, Long> {
+
+    Movie save(Movie movie);
 
     Movie findByDirector(String director);
 }
